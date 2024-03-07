@@ -1,0 +1,36 @@
+Notifications 3 Mark all as read - notifications head
+
+Mark Webber reacted to your recent post My first tournament today!
+1m ago - 1st unread notification
+    
+Angela Gray followed you
+5m ago - unread
+    
+Jacob Thompson has joined your group Chess Club
+1 day ago - unread
+    
+Rizky Hasanuddin sent you a private message
+5 days ago - read
+    Hello, thanks for setting up the Chess
+    Club. I've been a member for a few weeks now and I'm already having lots of
+    fun and improving my game. - seperate section (with in read)
+    
+Kimberly Smith commented on your picture 1 week - read (with an image)
+ago Nathan Peterson reacted to your recent post 5 end-game strategies to
+increase your win rate
+2 weeks ago - read
+    
+Anna Kim left the group Chess Club
+2 weeks ago - read
+
+==========================================
+
+on adding js front, i noticed that when i was getting elements by className, i was not able to turn all
+unread elements to read. but when i selected all elements by the tag name which is "div", i was able to
+change all the classname instantly.
+=================
+inorder to get the chess club from getting blue, i had to put !important in the back of the css for it to work as intended.
+====================
+now all i need to do is,
+1. To shift picture to the right side - done, all i had to do was to add a div(with display:flex) then cover the first part of notification with it and set justify-content to "space-around" and boom!
+2. To fix the red dot.
