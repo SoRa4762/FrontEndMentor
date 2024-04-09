@@ -90,7 +90,15 @@ body {
   .steps-footer {
     height: 10vh;
     width: 100%;
-    background-color: var(--primary-light-blue);
+    background-color: var(--neutral-magnolia);
+    display: flex;
+    
+  }
+
+  .steps-footer button {
+    background-color: var(--primary-pastel-blue);
+    border: none;
+    padding: 1rem 1.5rem;
   }
 
   .step-1 {
