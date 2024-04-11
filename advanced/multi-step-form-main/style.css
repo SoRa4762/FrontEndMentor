@@ -24,7 +24,7 @@
 }
 
 body {
-  background-color: var(--neutral-alabaster);
+  background-color: var(--neutral-magnolia);
 }
 
 /* mobile design first */
@@ -90,10 +90,36 @@ body {
     gap: 0.5rem;
   }
 
+  .steps-body > h1 {
+    font-size: 24px;
+    font-weight: 00;
+  }
+
+  .steps-body > h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--neutral-cool-gray);
+  }
+
+  .steps-body input::placeholder,
+  input {
+    color: var(--neutral-cool-gray);
+  }
+
+  .steps-body input {
+    padding: 0.7rem 0.5rem;
+    border: 1px solid var(--neutral-cool-gray);
+    border-radius: 4px;
+  }
+
+  .steps-body input:active {
+    border: 1px solid var(--neutral-cool-gray);
+  }
+
   .steps-footer {
     height: 10vh;
     width: 100%;
-    background-color: var(--neutral-magnolia);
+    background-color: var(--neutral-white);
     display: flex;
     justify-content: space-between;
     align-items: center;
