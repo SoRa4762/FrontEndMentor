@@ -88,6 +88,7 @@ body {
     justify-content: center;
     border-radius: 1rem;
     gap: 0.5rem;
+    /* color: #ccc; */
   }
 
   .steps-body > h1 {
@@ -97,7 +98,7 @@ body {
 
   .steps-body > h2 {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--neutral-cool-gray);
   }
 
@@ -116,6 +117,98 @@ body {
     border: 1px solid var(--neutral-cool-gray);
   }
 
+  .steps-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .steps-selection-options {
+    display: flex;
+    gap: 0.5rem;
+    border: 1px solid var(--neutral-cool-gray);
+    /* background-color: var(--neutral-magnolia); */
+    padding: 1.2rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .steps-selection-options:hover {
+    border: 1px solid var(--primary-marine-blue);
+    background-color: var(--neutral-magnolia);
+  }
+
+  .steps-selection-options p {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .steps-selection-options p > span {
+    color: var(--neutral-cool-gray);
+    font-weight: 400;
+  }
+  .steps-selection-diff-option {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 5rem;
+    background-color: var(--neutral-alabaster);
+    border-radius: 8px;
+    font-weight: 600;
+  }
+
+  .steps-selection-diff-option input {
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+  }
+
+  .steps-selection-diff-option input:checked ~ .slider:before {
+    /* -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px); */
+    transform: translateX(20px);
+  }
+  /** probably need to use js here */
+  /* .steps-selection-diff-option input:checked ~ .monthly {
+    color: var(--neutral-cool-gray);
+  } */
+
+  .steps-selection-diff-option .switch {
+    position: relative;
+    display: inline-block;
+    height: 19px;
+    width: 40px;
+    transition: 400ms;
+  }
+
+  .steps-selection-diff-option .switch:hover {
+    cursor: pointer;
+  }
+
+  .steps-selection-diff-option .slider {
+    position: absolute;
+    border-radius: 34px;
+    background-color: var(--primary-marine-blue);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .steps-selection-diff-option .slider::before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    background-color: var(--neutral-white);
+    left: 3px;
+    bottom: 3px;
+    border-radius: 50%;
+    transition: 400ms;
+  }
+
   .steps-footer {
     height: 10vh;
     width: 100%;
@@ -126,7 +219,7 @@ body {
     padding: 0 1.5rem;
   }
 
-  .steps-footer button {
+  .btn-next {
     /* height: 3rem; */
     /* display: flex; */
     background-color: var(--primary-marine-blue);
@@ -136,18 +229,35 @@ body {
     color: var(--neutral-white);
   }
 
-  .step-1 {
+  .btn-back {
+    background-color: transparent;
+    border: none;
+    color: var(--neutral-cool-gray);
+  }
+
+  .steps-footer button:hover {
+    cursor: pointer;
+  }
+
+  .step-1,
+  .step-2,
+  .step-3,
+  .step-4,
+  .step-5 {
     /* background: white; */
     height: 100%;
     width: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }
 
-  .step-2 {
+  .step-1 {
     display: none;
+  }
+
+  .step-2 {
+    display: flex;
   }
 
   .step-3 {
