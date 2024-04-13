@@ -87,7 +87,7 @@
 
         <div class="steps-footer">
           <div></div>
-          <button>Next Step</button>
+          <button class="btn-next">Next Step</button>
         </div>
 
         <!-- Step 1 end -->
@@ -100,27 +100,33 @@
           <h2>You have the option of monthly or yearly billing.</h2>
           <div class="steps-selection">
             <div class="steps-selection-options">
-              <img src="./assets/images/icon-arcade.svg" alt="Arcade" />
-              <p>
-                Arcade
-                <span>$9/mo</span>
-              </p>
+              <div class="steps-section-options-flex">
+                <img src="./assets/images/icon-arcade.svg" alt="Arcade" />
+                <p>
+                  Arcade
+                  <span>$9/mo</span>
+                </p>
+              </div>
             </div>
 
             <div class="steps-selection-options">
-              <img src="./assets/images/icon-advanced.svg" alt="Arcade" />
-              <p>
-                Advanced
-                <span>$12/mo</span>
-              </p>
+              <div class="steps-section-options-flex">
+                <img src="./assets/images/icon-advanced.svg" alt="Arcade" />
+                <p>
+                  Advanced
+                  <span>$12/mo</span>
+                </p>
+              </div>
             </div>
 
             <div class="steps-selection-options">
-              <img src="./assets/images/icon-pro.svg" alt="Arcade" />
-              <p>
-                Pro
-                <span>$15/mo</span>
-              </p>
+              <div class="steps-section-options-flex">
+                <img src="./assets/images/icon-pro.svg" alt="Arcade" />
+                <p>
+                  Pro
+                  <span>$15/mo</span>
+                </p>
+              </div>
             </div>
             <div class="steps-selection-diff-option">
               <span class="monthly">Monthly</span>
@@ -142,11 +148,52 @@
 
       <!-- Step 3 start -->
       <div class="step-3">
-        Pick add-ons Add-ons help enhance your gaming experience. Online service
-        Access to multiplayer games +$1/mo Larger storage Extra 1TB of cloud
-        save +$2/mo Customizable Profile Custom theme on your profile +$2/mo Go
-        Back Next Step
+        <div class="steps-body">
+          <h1>Pick add-ons</h1>
+          <h2>Add-ons help enhance your gaming experience.</h2>
+          <div class="steps-selection">
+            <div class="steps-selection-options">
+              <div class="steps-section-options-flex">
+                <input type="checkbox" />
+                <p>
+                  Online service
+                  <span>Access to multiplayer games</span>
+                </p>
+              </div>
+              <div class="steps-body-price"><p>+$1/mo</p></div>
+            </div>
 
+            <div class="steps-selection-options">
+              <div class="steps-section-options-flex">
+                <input type="checkbox" />
+                <p>
+                  Larger storage
+                  <span>Extra 1TB of cloud save</span>
+                </p>
+              </div>
+              <div class="steps-body-price">
+                <p>+$2/mo</p>
+              </div>
+            </div>
+
+            <div class="steps-selection-options">
+              <div class="steps-section-options-flex">
+                <input type="checkbox" />
+                <p>
+                  Customizable Profile
+                  <span>Custom theme on your profile</span>
+                </p>
+              </div>
+              <div class="steps-body-price">
+                <p>+$2/mo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="steps-footer">
+          <button class="btn-back">Go Back</button>
+          <button class="btn-next">Next Step</button>
+        </div>
         <!-- Step 3 end -->
       </div>
 
