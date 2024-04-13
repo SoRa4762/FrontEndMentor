@@ -79,6 +79,7 @@ body {
 
   .steps-body {
     /* align-items: center; */
+    /* color: #ccc; */
     background: var(--neutral-white);
     width: 90%;
     display: flex;
@@ -88,7 +89,6 @@ body {
     justify-content: center;
     border-radius: 1rem;
     gap: 0.5rem;
-    /* color: #ccc; */
   }
 
   .steps-body > h1 {
@@ -102,9 +102,19 @@ body {
     color: var(--neutral-cool-gray);
   }
 
+  .steps-body > label {
+    font-weight: 500;
+    padding-top: 8px;
+  }
+
+  .steps-body label:first-child {
+    padding-top: 1rem;
+  }
+
   .steps-body input::placeholder,
   input {
     color: var(--neutral-cool-gray);
+    font-weight: 600;
   }
 
   .steps-body input {
@@ -121,6 +131,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding-top: 1rem;
   }
 
   .steps-selection-options {
@@ -131,6 +142,8 @@ body {
     padding: 1.2rem 1rem;
     border-radius: 8px;
     cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .steps-selection-options:hover {
@@ -147,8 +160,25 @@ body {
 
   .steps-selection-options p > span {
     color: var(--neutral-cool-gray);
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 14px;
   }
+
+  .steps-body-price p {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary-purplish-blue);
+  }
+
+  .steps-section-options-flex {
+    display: flex;
+    gap: 12px;
+  }
+
+  .steps-section-options-flex span {
+    padding-top: 4px;
+  }
+
   .steps-selection-diff-option {
     display: flex;
     justify-content: space-around;
@@ -257,7 +287,7 @@ body {
   }
 
   .step-2 {
-    display: flex;
+    display: none;
   }
 
   .step-3 {
@@ -265,7 +295,7 @@ body {
   }
 
   .step-4 {
-    display: none;
+    display: flex;
   }
 
   .step-5 {
