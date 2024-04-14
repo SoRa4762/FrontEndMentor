@@ -265,6 +265,14 @@ body {
     color: var(--neutral-cool-gray);
   }
 
+  .btn-confirm {
+    background-color: var(--primary-purplish-blue);
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 4px;
+    color: var(--neutral-white);
+  }
+
   .steps-footer button:hover {
     cursor: pointer;
   }
