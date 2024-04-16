@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tutorial 8</title>
+  </head>
+  <body>
+    <p>
+      Today i am the substitute teacher for L1C9 which is being held on the
+      class Bhojpur
+    </p>
+
+    <form onsubmit="Submit(event)">
+      <label for="name">Name</label>
+      <input id="name" type="text" />
+      <label for="age">Age</label>
+      <input id="age" type="number" />
+      <button>submit</button>
+    </form>
+
+    <script>
+      //variable
+      let name;
+      name = "Abhishek";
+      let age = 45;
+      const name1 = "Mukunda";
+      //   name1 = "Bipul";
+
+      //function
+      //   num1 = 1;
+      //   num2 = 200;
+
+      //   console.log(num1 + num2);
+
+      //function creation
+      function sum(num1, num2) {
+        const sumValue = num1 + num2;
+        console.log("Function Called: ", sumValue);
+      }
+
+      //function call
+      sum(12, 24);
+
+      const num3 = 36;
+      const num4 = "45";
+      const sumValue2 = Number(num4) + parseInt(num3);
+      console.log(sumValue2);
+
+      //alert
+      //   alert("This is a simple alert message!");
+
+      //   const promptValue = prompt("This is a simple prompt");
+      //   console.log(promptValue);
+
+      function Submit(event) {
+        event.preventDefault();
+        const nameInput = document.getElementById("name");
+        const ageInput = document.getElementById("age");
+
+        // console.log(nameInput);
+        alert(
+          "This is user's name: " +
+            nameInput.value +
+            " " +
+            "This is user's age: " +
+            ageInput.value
+        );
+      }
+    </script>
+  </body>
+</html>
