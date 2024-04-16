@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Get a response</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #body {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: flex-start; */
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      #body2 {
+        display: none;
+        flex-direction: column;
+        /* justify-content: flex-start; */
+        align-items: flex-start;
+        gap: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="body">
+      <h1 id="heading">lets get a response from user</h1>
+      <p id="response">this is a response</p>
+      <button id="getResponse">get response</button>
+      <button id="changeContent1">change content</button>
+    </div>
+    <div id="body2">
+      <h1 id="heading">lets not get a response from user</h1>
+      <p id="response">this is not a response</p>
+      <button id="getResponse">dont get response</button>
+      <button id="changeContent2">change content</button>
+    </div>
+    <script>
+      const body = document.getElementById("body");
+      const body2 = document.getElementById("body2");
+      const getResponse = document.getElementById("getResponse");
+      const changeContent1 = document.getElementById("changeContent1");
+      const changeContent2 = document.getElementById("changeContent2");
+
+      getResponse.addEventListener("click", async function () {
+        const response = await prompt(
+          "This is how you get a response from the user directly!"
+        );
+        document.getElementById("response").textContent = response;
+        fib(response);
+        alert("This is just an alert message: " + response);
+      });
+
+      //objs
+      const obj = {
+        user: { fullname: "sora", email: "sora@gmail.com" },
+        password: "password",
+      };
+
+      console.log(obj.user);
+      console.log(obj.password);
+      console.log(obj.user.fullname);
+
+      //array
+      const arr = [
+        1,
+        [1, 2, [3, 4, 5, [{ name: "sora", password: "password" }]], 4, 5],
+        3,
+        43,
+        5,
+      ];
+
+      console.log("array: ", arr);
+      console.log("array 0: ", arr[0]);
+      console.log("array 1:", arr[1]);
+      console.log("array 1 inside:", arr[1][2]);
+      console.log("array 1 inside object:", arr[1][2][3]);
+      console.log("array 1 inside object name:", arr[1][2][3][0].name);
+      console.log("array 2:", arr[2]);
+      console.log("array 3:", arr[3]);
+      console.log("array 4:", arr[4]);
+
+      //lets change content aight?
+      // body.style.display = "none";
+      const changeContentFn = () => {
+        console.log("content changed!");
+        body2.style.display = "flex";
+        body.style.display = "none";
+      };
+
+      const changeContentFn2 = () => {
+        body2.style.display = "none";
+        body.style.display = "flex";
+      };
+      changeContent1.addEventListener("click", changeContentFn);
+      changeContent2.addEventListener("click", changeContentFn2);
+
+      //fibonacci
+      function fib(num) {
+        let fib = [0, 1];
+        for (let i = 2; i < num; i++) {
+          fibo = fib[i - 1] + fib[i - 2];
+          fib.push(fibo);
+        }
+        console.log(fib);
+        const p = document.createElement("p");
+        p.id = "fibonacci";
+        body.appendChild(p);
+        document.getElementById("fibonacci").textContent = fib;
+        // document.write(fib); clears all the content and only displays the stuff written with in the stuff
+        //   fib();
+      }
+    </script>
+  </body>
+</html>
